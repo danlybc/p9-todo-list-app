@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>template.js</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/search.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script> -->
+    <script src="scripts/fuse.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme.css">
+    
+    
+    
+      
+        <link type="text/css" rel="stylesheet" href="custom.css">
+      
+    
+<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/>
+                <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+</head>
+<body>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html"><div class="text">todo-list-app</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><ul><li><a href='audit.pdf' class='' id='' target='_blank'>Audit</a></li></ul><h3>Classes</h3><ul><li><a href="app.Todo.html">Todo</a></li><li><a href="controller.Controller.html">Controller</a></li><li><a href="model.Model.html">Model</a></li><li><a href="template.Template.html">Template</a></li></ul><h3>Namespaces</h3><ul><li><a href="app.html">app</a></li><li><a href="controller.html">controller</a><ul class='methods'><li data-type='method'><a href="controller.html#.Controller#_filter">Controller#_filter</a></li><li data-type='method'><a href="controller.html#.Controller#_updateCount">Controller#_updateCount</a></li><li data-type='method'><a href="controller.html#.Controller#_updateFilterState">Controller#_updateFilterState</a></li><li data-type='method'><a href="controller.html#.Controller#addItem">Controller#addItem</a></li><li data-type='method'><a href="controller.html#.Controller#removeCompletedItems">Controller#removeCompletedItems</a></li><li data-type='method'><a href="controller.html#.Controller#removeItem">Controller#removeItem</a></li><li data-type='method'><a href="controller.html#.Controller#setView">Controller#setView</a></li><li data-type='method'><a href="controller.html#.Controller#showActive">Controller#showActive</a></li><li data-type='method'><a href="controller.html#.Controller#showAll">Controller#showAll</a></li><li data-type='method'><a href="controller.html#.Controller#showCompleted">Controller#showCompleted</a></li><li data-type='method'><a href="controller.html#.Controller#toggleAll">Controller#toggleAll</a></li><li data-type='method'><a href="controller.html#.Controller#toggleComplete">Controller#toggleComplete</a></li></ul></li><li><a href="helpers.html">helpers</a><ul class='methods'><li data-type='method'><a href="helpers.html#.window.$delegate">window.$delegate</a></li><li data-type='method'><a href="helpers.html#.window.$on">window.$on</a></li><li data-type='method'><a href="helpers.html#.window.$parent">window.$parent</a></li><li data-type='method'><a href="helpers.html#.window.qs">window.qs</a></li><li data-type='method'><a href="helpers.html#.window.qsa">window.qsa</a></li></ul></li><li><a href="model.html">model</a><ul class='methods'><li data-type='method'><a href="model.html#.Model#create">Model#create</a></li><li data-type='method'><a href="model.html#.Model#getCount">Model#getCount</a></li><li data-type='method'><a href="model.html#.Model#read">Model#read</a></li><li data-type='method'><a href="model.html#.Model#remove">Model#remove</a></li><li data-type='method'><a href="model.html#.Model#removeAll">Model#removeAll</a></li><li data-type='method'><a href="model.html#.Model#update">Model#update</a></li></ul></li><li><a href="store.html">store</a><ul class='methods'><li data-type='method'><a href="store.html#.Store">Store</a></li><li data-type='method'><a href="store.html#.Store#drop">Store#drop</a></li><li data-type='method'><a href="store.html#.Store#find">Store#find</a></li><li data-type='method'><a href="store.html#.Store#findAll">Store#findAll</a></li><li data-type='method'><a href="store.html#.Store#remove">Store#remove</a></li><li data-type='method'><a href="store.html#.Store#save">Store#save</a></li></ul></li><li><a href="template.html">template</a><ul class='methods'><li data-type='method'><a href="template.html#.Template#clearCompletedButton">Template#clearCompletedButton</a></li><li data-type='method'><a href="template.html#.Template#itemCounter">Template#itemCounter</a></li><li data-type='method'><a href="template.html#.Template#show">Template#show</a></li></ul></li><li><a href="view.html">view</a><ul class='methods'><li data-type='method'><a href="view.html#.View#_bindItemEditCancel">View#_bindItemEditCancel</a></li><li data-type='method'><a href="view.html#.View#_bindItemEditDone">View#_bindItemEditDone</a></li><li data-type='method'><a href="view.html#.View#_clearCompletedButton">View#_clearCompletedButton</a></li><li data-type='method'><a href="view.html#.View#_editItem">View#_editItem</a></li><li data-type='method'><a href="view.html#.View#_editItemDone">View#_editItemDone</a></li><li data-type='method'><a href="view.html#.View#_elementComplete">View#_elementComplete</a></li><li data-type='method'><a href="view.html#.View#_itemId">View#_itemId</a></li><li data-type='method'><a href="view.html#.View#_removeItem">View#_removeItem</a></li><li data-type='method'><a href="view.html#.View#_setFilter">View#_setFilter</a></li><li data-type='method'><a href="view.html#.View#bind">View#bind</a></li><li data-type='method'><a href="view.html#.View#render">View#render</a></li></ul></li></ul></div>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">template.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*jshint laxbreak:true */
+/**
+ * Template module to generate DOM elements
+ * @namespace template
+ */
+(function (window) {
+  "use strict";
+
+  var htmlEscapes = {
+    "&amp;": "&amp;amp;",
+    "&lt;": "&amp;lt;",
+    ">": "&amp;gt;",
+    '"': "&amp;quot;",
+    "'": "&amp;#x27;",
+    "`": "&amp;#x60;",
+  };
+
+  var escapeHtmlChar = function (chr) {
+    return htmlEscapes[chr];
+  };
+
+  var reUnescapedHtml = /[&amp;&lt;>"'`]/g;
+  var reHasUnescapedHtml = new RegExp(reUnescapedHtml.source);
+
+  var escape = function (string) {
+    return string &amp;&amp; reHasUnescapedHtml.test(string)
+      ? string.replace(reUnescapedHtml, escapeHtmlChar)
+      : string;
+  };
+
+  /**
+   * Sets up defaults for all the Template methods such as a default template
+   *
+   * @memberof template
+   * @constructor
+   */
+  function Template() {
+    this.defaultTemplate =
+      '&lt;li data-id="{{id}}" class="{{completed}}">' +
+      '&lt;div class="view">' +
+      '&lt;input class="toggle" type="checkbox" {{checked}}>' +
+      "&lt;label>{{title}}&lt;/label>" +
+      '&lt;button class="destroy">&lt;/button>' +
+      "&lt;/div>" +
+      "&lt;/li>";
+  }
+
+  /**
+   * Creates an &lt;li> HTML string and returns it for placement in your app.
+   *
+   * NOTE: In real life you should be using a templating engine such as Mustache
+   * or Handlebars, however, this is a vanilla JS example.
+   * @memberof template
+   *
+   * @param {object} data The object containing keys you want to find in the
+   *                      template to replace.
+   * @returns {string} HTML String of an &lt;li> element
+   *
+   * @example
+   * view.show({
+   *	id: 1,
+   *	title: "Hello World",
+   *	completed: 0,
+   * });
+   */
+  Template.prototype.show = function (data) {
+    var i, l;
+    var view = "";
+
+    for (i = 0, l = data.length; i &lt; l; i++) {
+      var template = this.defaultTemplate;
+      var completed = "";
+      var checked = "";
+
+      if (data[i].completed) {
+        completed = "completed";
+        checked = "checked";
+      }
+
+      template = template.replace("{{id}}", data[i].id);
+      template = template.replace("{{title}}", escape(data[i].title));
+      template = template.replace("{{completed}}", completed);
+      template = template.replace("{{checked}}", checked);
+
+      view = view + template;
+    }
+
+    return view;
+  };
+
+  /**
+   * Displays a counter of how many to dos are left to complete
+   * @memberof template
+   *
+   * @param {number} activeTodos The number of active todos.
+   * @returns {string} String containing the count
+   */
+  Template.prototype.itemCounter = function (activeTodos) {
+    var plural = activeTodos === 1 ? "" : "s";
+
+    return "&lt;strong>" + activeTodos + "&lt;/strong> item" + plural + " left";
+  };
+
+  /**
+   * Updates the text within the "Clear completed" button
+   * @memberof template
+   *
+   * @param  {array} completedTodos The number of completed todos.
+   * @returns {string} String containing the count
+   */
+  Template.prototype.clearCompletedButton = function (completedTodos) {
+    if (completedTodos > 0) {
+      return "Clear completed";
+    } else {
+      return "";
+    }
+  };
+
+  // Export to window
+  window.app = window.app || {};
+  window.app.Template = Template;
+})(window);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+  
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script>
+var list = [{"title":"Todo","link":"<a href=\"app.Todo.html\">Todo</a>"},{"title":"Controller","link":"<a href=\"controller.Controller.html\">Controller</a>"},{"title":"Model","link":"<a href=\"model.Model.html\">Model</a>"},{"title":"Template","link":"<a href=\"template.Template.html\">Template</a>"},{"title":"app","link":"<a href=\"app.html\">app</a>"},{"title":"controller","link":"<a href=\"controller.html\">controller</a>"},{"title":"controller.Controller#_filter","link":"<a href=\"controller.html#.Controller#_filter\">controller.Controller &rtrif; _filter</a>"},{"title":"controller.Controller#_updateCount","link":"<a href=\"controller.html#.Controller#_updateCount\">controller.Controller &rtrif; _updateCount</a>"},{"title":"controller.Controller#_updateFilterState","link":"<a href=\"controller.html#.Controller#_updateFilterState\">controller.Controller &rtrif; _updateFilterState</a>"},{"title":"controller.Controller#addItem","link":"<a href=\"controller.html#.Controller#addItem\">controller.Controller &rtrif; addItem</a>"},{"title":"controller.Controller#removeCompletedItems","link":"<a href=\"controller.html#.Controller#removeCompletedItems\">controller.Controller &rtrif; removeCompletedItems</a>"},{"title":"controller.Controller#removeItem","link":"<a href=\"controller.html#.Controller#removeItem\">controller.Controller &rtrif; removeItem</a>"},{"title":"controller.Controller#setView","link":"<a href=\"controller.html#.Controller#setView\">controller.Controller &rtrif; setView</a>"},{"title":"controller.Controller#showActive","link":"<a href=\"controller.html#.Controller#showActive\">controller.Controller &rtrif; showActive</a>"},{"title":"controller.Controller#showAll","link":"<a href=\"controller.html#.Controller#showAll\">controller.Controller &rtrif; showAll</a>"},{"title":"controller.Controller#showCompleted","link":"<a href=\"controller.html#.Controller#showCompleted\">controller.Controller &rtrif; showCompleted</a>"},{"title":"controller.Controller#toggleAll","link":"<a href=\"controller.html#.Controller#toggleAll\">controller.Controller &rtrif; toggleAll</a>"},{"title":"controller.Controller#toggleComplete","link":"<a href=\"controller.html#.Controller#toggleComplete\">controller.Controller &rtrif; toggleComplete</a>"},{"title":"helpers","link":"<a href=\"helpers.html\">helpers</a>"},{"title":"helpers.window.$delegate","link":"<a href=\"helpers.html#.window.$delegate\">helpers.window.$delegate &rtrif; undefined</a>"},{"title":"helpers.window.$on","link":"<a href=\"helpers.html#.window.$on\">helpers.window.$on &rtrif; undefined</a>"},{"title":"helpers.window.$parent","link":"<a href=\"helpers.html#.window.$parent\">helpers.window.$parent &rtrif; undefined</a>"},{"title":"helpers.window.qs","link":"<a href=\"helpers.html#.window.qs\">helpers.window.qs &rtrif; undefined</a>"},{"title":"helpers.window.qsa","link":"<a href=\"helpers.html#.window.qsa\">helpers.window.qsa &rtrif; undefined</a>"},{"title":"model","link":"<a href=\"model.html\">model</a>"},{"title":"model.Model#create","link":"<a href=\"model.html#.Model#create\">model.Model &rtrif; create</a>"},{"title":"model.Model#getCount","link":"<a href=\"model.html#.Model#getCount\">model.Model &rtrif; getCount</a>"},{"title":"model.Model#read","link":"<a href=\"model.html#.Model#read\">model.Model &rtrif; read</a>"},{"title":"model.Model#remove","link":"<a href=\"model.html#.Model#remove\">model.Model &rtrif; remove</a>"},{"title":"model.Model#removeAll","link":"<a href=\"model.html#.Model#removeAll\">model.Model &rtrif; removeAll</a>"},{"title":"model.Model#update","link":"<a href=\"model.html#.Model#update\">model.Model &rtrif; update</a>"},{"title":"store","link":"<a href=\"store.html\">store</a>"},{"title":"store.Store","link":"<a href=\"store.html#.Store\">store.Store &rtrif; undefined</a>"},{"title":"store.Store#drop","link":"<a href=\"store.html#.Store#drop\">store.Store &rtrif; drop</a>"},{"title":"store.Store#find","link":"<a href=\"store.html#.Store#find\">store.Store &rtrif; find</a>"},{"title":"store.Store#findAll","link":"<a href=\"store.html#.Store#findAll\">store.Store &rtrif; findAll</a>"},{"title":"store.Store#remove","link":"<a href=\"store.html#.Store#remove\">store.Store &rtrif; remove</a>"},{"title":"store.Store#save","link":"<a href=\"store.html#.Store#save\">store.Store &rtrif; save</a>"},{"title":"template","link":"<a href=\"template.html\">template</a>"},{"title":"template.Template#clearCompletedButton","link":"<a href=\"template.html#.Template#clearCompletedButton\">template.Template &rtrif; clearCompletedButton</a>"},{"title":"template.Template#itemCounter","link":"<a href=\"template.html#.Template#itemCounter\">template.Template &rtrif; itemCounter</a>"},{"title":"template.Template#show","link":"<a href=\"template.html#.Template#show\">template.Template &rtrif; show</a>"},{"title":"view","link":"<a href=\"view.html\">view</a>"},{"title":"view.View#_bindItemEditCancel","link":"<a href=\"view.html#.View#_bindItemEditCancel\">view.View &rtrif; _bindItemEditCancel</a>"},{"title":"view.View#_bindItemEditDone","link":"<a href=\"view.html#.View#_bindItemEditDone\">view.View &rtrif; _bindItemEditDone</a>"},{"title":"view.View#_clearCompletedButton","link":"<a href=\"view.html#.View#_clearCompletedButton\">view.View &rtrif; _clearCompletedButton</a>"},{"title":"view.View#_editItem","link":"<a href=\"view.html#.View#_editItem\">view.View &rtrif; _editItem</a>"},{"title":"view.View#_editItemDone","link":"<a href=\"view.html#.View#_editItemDone\">view.View &rtrif; _editItemDone</a>"},{"title":"view.View#_elementComplete","link":"<a href=\"view.html#.View#_elementComplete\">view.View &rtrif; _elementComplete</a>"},{"title":"view.View#_itemId","link":"<a href=\"view.html#.View#_itemId\">view.View &rtrif; _itemId</a>"},{"title":"view.View#_removeItem","link":"<a href=\"view.html#.View#_removeItem\">view.View &rtrif; _removeItem</a>"},{"title":"view.View#_setFilter","link":"<a href=\"view.html#.View#_setFilter\">view.View &rtrif; _setFilter</a>"},{"title":"view.View#bind","link":"<a href=\"view.html#.View#bind\">view.View &rtrif; bind</a>"},{"title":"view.View#render","link":"<a href=\"view.html#.View#render\">view.View &rtrif; render</a>"}];
+setupSearch(list)
+</script>
+
+ 
+<script type="text/javascript" src="scripts/misc.js"></script>
+</body>
+</html>

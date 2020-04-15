@@ -1,0 +1,31 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "source": {
+    "exclude": ["assets/js/lib", "assets/static", "build", "public", "node_modules", "debug", "docs", "error"],
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "theme_opts": {
+      "title": "todo-list-app",
+      "menu": [{
+        "title": "Audit",
+        "link": "audit.pdf",
+        "target": "_blank"
+      }],
+      "add_style_path": ["custom.css"]
+    },
+    "recurse": true,
+    "readme": "./README.md",
+    "destination": "./docs/",
+    "template": "node_modules/jsdoc-template"
+  },
+  "jsVersion": 180
+}

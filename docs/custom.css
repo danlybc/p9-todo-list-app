@@ -1,0 +1,29 @@
+blockquote {
+  color: rgb(98, 98, 98);
+  background: rgb(238, 238, 238);
+  padding: 5px;
+  border-radius: .3vw;
+  -webkit-border-radius: .3vw;
+  -moz-border-radius: .3vw;
+  -ms-border-radius: .3vw;
+  -o-border-radius: .3vw;
+}
+
+blockquote:before {
+  content: "‟ ";
+  display: inline;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: grey;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+
+}
+
+ul li:before {
+  content: '- '
+}
