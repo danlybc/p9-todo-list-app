@@ -63,6 +63,8 @@ Write docs showing :
 
 You're reading it right now.
 
+[Check the technical doc](https://docs-p8.danly.co/)
+
 ---
 
 ## Install
