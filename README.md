@@ -6,6 +6,8 @@ Take over and improve an existing project.
 
 ---
 
+!(Banner presentation for the project, showing TodoMVC, Jasmine and Lighthouse audit logo)[./docs-img/readme-banner.png]
+
 ## Project
 
 Forked from [tastejs/todomvc](https://github.com/tastejs/todomvc) with some  
