@@ -6,7 +6,7 @@ Take over and improve an existing project.
 
 ---
 
-!(Banner presentation for the project, showing TodoMVC, Jasmine and Lighthouse audit logo)[./docs-img/readme-banner.png]
+![Banner presentation for the project, showing TodoMVC, Jasmine and Lighthouse audit logo](./docs-img/readme-banner.png)
 
 ## Project
 
