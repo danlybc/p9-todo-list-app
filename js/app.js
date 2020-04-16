@@ -1,14 +1,9 @@
-/**
- * Main app module
- * @namespace app
- */
 (function () {
   "use strict";
 
   /**
    * Sets up a brand new Todo list.
-   * @memberof app
-   * @constructor
+   * @class Todo
    * @param {string} name The name of your new to do list.
    */
   function Todo(name) {

@@ -1,15 +1,11 @@
-/**
- * @namespace controller
- *
- */
 (function (window) {
   "use strict";
 
   /**
    * Initiate a controller for the view
+   * @name Controller
    *
-   * @memberof controller
-   * @constructor
+   * @class
    * @param {object} model The model instance
    * @param {object} view The view instance
    */
@@ -53,7 +49,8 @@
 
   /**
    * Loads and initialises the view
-   * @memberof controller
+   * @method
+   * @name Controller#setView
    * @param {string} '' | 'active' | 'completed'
    */
   Controller.prototype.setView = function (locationHash) {
@@ -64,7 +61,8 @@
   /**
    * An event to fire on load. Will get all items and display them in the
    * todo-list
-   * @memberof controller
+   * @method
+   * @name Controller#showAll
    */
   Controller.prototype.showAll = function () {
     var self = this;
@@ -75,7 +73,8 @@
 
   /**
    * Renders all active tasks
-   * @memberof controller
+   * @method
+   * @name Controller#showActive
    */
   Controller.prototype.showActive = function () {
     var self = this;
@@ -86,7 +85,8 @@
 
   /**
    * Renders all completed tasks
-   * @memberof controller
+   * @method
+   * @name Controller#showCompleted
    */
   Controller.prototype.showCompleted = function () {
     var self = this;
@@ -98,7 +98,8 @@
   /**
    * An event to fire whenever you want to add an item. Simply pass in the event
    * object and it'll handle the DOM insertion and saving of the new item.
-   * @memberof controller
+   * @method
+   * @name Controller#addItem
    */
   Controller.prototype.addItem = function (title) {
     var self = this;
@@ -113,9 +114,10 @@
     });
   };
 
-  /*
+  /**
    * Triggers the item editing mode.
-   @memberof controller
+   * @method
+   * @name Controller#editItem
    */
   Controller.prototype.editItem = function (id) {
     var self = this;
@@ -124,9 +126,10 @@
     });
   };
 
-  /*
+  /**
    * Finishes the item editing mode successfully.
-   @memberof controller
+   * @method
+   * @name Controller#editItemSave
    */
   Controller.prototype.editItemSave = function (id, title) {
     var self = this;
@@ -148,9 +151,10 @@
     }
   };
 
-  /*
+  /**
    * Cancels the item editing mode.
-   @memberof controller
+   * @method
+   * @name Controller#editItemCancel
    */
   Controller.prototype.editItemCancel = function (id) {
     var self = this;
@@ -163,9 +167,11 @@
    * By giving it an ID it'll find the DOM element matching that ID,
    * remove it from the DOM and also remove it from storage.
    *
+   * @method
+   * @name Controller#removeItem
    * @param {number} id The ID of the item to remove from the DOM and
    * storage
-   * @memberof controller
+
    */
   Controller.prototype.removeItem = function (id) {
     var self = this;
@@ -183,7 +189,8 @@
 
   /**
    * Will remove all completed items from the DOM and storage.
-   * @memberof controller
+   * @method
+   * @name Controller#removeCompletedItems
    */
   Controller.prototype.removeCompletedItems = function () {
     var self = this;
@@ -200,11 +207,13 @@
    * Give it an ID of a model and a checkbox and it will update the item
    * in storage based on the checkbox's state.
    *
+   * @method
+   * @name Controller#toggleComplete
    * @param {number} id The ID of the element to complete or uncomplete
    * @param {object} checkbox The checkbox to check the state of complete
    *                          or not
    * @param {boolean|undefined} silent Prevent re-filtering the todo items
-   * @memberof controller
+
    */
   Controller.prototype.toggleComplete = function (id, completed, silent) {
     var self = this;
@@ -223,7 +232,8 @@
   /**
    * Will toggle ALL checkboxes' on/off state and completeness of models.
    * Just pass in the event object.
-   * @memberof controller
+   * @method
+   * @name Controller#toggleAll
    */
   Controller.prototype.toggleAll = function (completed) {
     var self = this;
@@ -240,7 +250,8 @@
   /**
    * Updates the pieces of the page which change depending on the remaining
    * number of todos.
-   * @memberof controller
+   * @method
+   * @name Controller#_updateCount
    */
   Controller.prototype._updateCount = function () {
     var self = this;
@@ -261,7 +272,8 @@
   /**
    * Re-filters the todo items, based on the active route.
    * @param {boolean|undefined} force  forces a re-painting of todo items.
-   * @memberof controller
+   * @method
+   * @name Controller#_filter
    */
   Controller.prototype._filter = function (force) {
     var activeRoute =
@@ -285,8 +297,9 @@
   };
 
   /**
-   * Simply updates the filter nav's selected states
-   * @memberof controller
+   * Updates the filter nav's selected states
+   * @method
+   * @name Controller#_updateFilterState
    */
   Controller.prototype._updateFilterState = function (currentPage) {
     // Store a reference to the active route, allowing us to re-filter todo

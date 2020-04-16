@@ -16,7 +16,11 @@
     "theme_opts": {
       "title": "todo-list-app",
       "menu": [{
-        "title": "Audit",
+        "title": "Ouvrir le repo GitHub 🔗",
+        "link": "https://github.com/danlybc/p9-todo-list-app",
+        "target": "_blank"
+      }, {
+        "title": "Ouvrir l'audit (format pdf) 🔗",
         "link": "audit.pdf",
         "target": "_blank"
       }],

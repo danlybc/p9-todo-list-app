@@ -1,15 +1,11 @@
-/**
- * Model modules for todos
- * @namespace model
- */
 (function (window) {
   "use strict";
 
   /**
    * Creates a new Model instance and hooks up the storage.
    *
-   * @memberof model
-   * @constructor
+   * @name Model
+   * @class
    * @param {object} storage A reference to the client side storage class
    */
   function Model(storage) {
@@ -19,7 +15,8 @@
   /**
    * Creates a new todo model
    *
-   * @memberof model
+   * @method
+   * @name Model#create
    * @param {string} [title] The title of the task
    * @param {function} [callback] The callback to fire after the model is created
    */
@@ -41,7 +38,8 @@
    * the ID of the model to find. Lastly, you can pass it an object to match
    * against.
    *
-   * @memberof model
+   * @method
+   * @name Model#read
    * @param {string|number|object} [query] A query to match models against
    * @param {function} [callback] The callback to fire after the model is found
    *
@@ -70,7 +68,8 @@
    * Updates a model by giving it an ID, data to update, and a callback to fire when
    * the update is complete.
    *
-   * @memberof model
+   * @method
+   * @name Model#update
    * @param {number} id The id of the model to update
    * @param {object} data The properties to update and their new value
    * @param {function} callback The callback to fire when the update is complete.
@@ -82,7 +81,8 @@
   /**
    * Removes a model from storage
    *
-   * @memberof model
+   * @method
+   * @name Model#remove
    * @param {number} id The ID of the model to remove
    * @param {function} callback The callback to fire when the removal is complete.
    */
@@ -93,7 +93,8 @@
   /**
    * WARNING: Will remove ALL data from storage.
    *
-   * @memberof model
+   * @method
+   * @name Model#removeAll
    * @param {function} callback The callback to fire when the storage is wiped.
    */
   Model.prototype.removeAll = function (callback) {
@@ -102,7 +103,8 @@
 
   /**
    * Returns a count of all todos
-   * @memberof model
+   * @method
+   * @name Model#getCount
    * @param {function} callback The callback to fire when the count is returned.
    */
   Model.prototype.getCount = function (callback) {

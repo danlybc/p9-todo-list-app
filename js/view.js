@@ -1,20 +1,17 @@
 /*global qs, qsa, $on, $parent, $delegate */
-/**
- * View module that abstracts away the browser's DOM completely.
- * It has two simple entry points:
- *
- *   - bind(eventName, handler)
- *     Takes a todo application event and registers the handler
- *   - render(command, parameterObject)
- *     Renders the given command with the options
- * @namespace view
- */
 (function (window) {
   "use strict";
 
   /**
-   * View constructor
-   * @constructor
+   * View that abstracts away the browser's DOM completely.
+   * It has two simple entry points:
+   *
+   *   - bind(eventName, handler)
+   *     Takes a todo application event and registers the handler
+   *   - render(command, parameterObject)
+   *     Renders the given command with the options
+   * @name View
+   * @class
    * @param {*} template
    */
 
@@ -37,7 +34,8 @@
   /**
    * Will remove an item from the View based on its ID
    *
-   * @memberof view
+   * @method
+   * @name View#_removeItem
    * @param {number} id The ID of the item you want to remove
    */
   View.prototype._removeItem = function (id) {
@@ -51,7 +49,8 @@
   /**
    * Will remove an item from the View based on its ID
    *
-   * @memberof view
+   * @method
+   * @name View#_clearCompletedButton
    * @param {number} completedCount Number of completed todos
    * @param {boolean} visible If true, show the button
    */
@@ -65,7 +64,8 @@
   /**
    * Will set provided filter to active
    *
-   * @memberof view
+   * @method
+   * @name View#_setFilter
    * @param {string} currentPage New filter to set
    */
   View.prototype._setFilter = function (currentPage) {
@@ -75,7 +75,8 @@
 
   /**
    * Toggle to complete an item based on its ID
-   * @memberof view
+   * @method
+   * @name View#_elementComplete
    *
    * @param {number} id The ID of the element you want to complete
    * @param {boolean} completed boolean to set completed state to
@@ -95,7 +96,8 @@
 
   /**
    * Edit an item based on its ID
-   * @memberof view
+   * @method
+   * @name View#_editItem
    *
    * @param {number} id The ID of the element you want to complete
    * @param {string} title The new title to put on the item
@@ -119,7 +121,8 @@
 
   /**
    * Will change item title based on its ID
-   * @memberof view
+   * @method
+   * @name View#_editItemDone
    *
    * @param {number} id The ID of the element you want to complete
    * @param {string} title The new title to put on the item
@@ -143,7 +146,8 @@
 
   /**
    * Will change item title based on its ID
-   * @memberof view
+   * @method
+   * @name View#render
    *
    * @param {string} viewCmd Function to be called
    * @param parameter Parameter to be passed to function
@@ -192,7 +196,8 @@
   };
 
   /**
-   * @memberof view
+   * @method
+   * @name View#_itemId
    *
    * @param {string} element Query to get item id from
    * @returns {number} id of provided element
@@ -204,7 +209,8 @@
 
   /**
    * Bind item to edit done state
-   * @memberof view
+   * @method
+   * @name View#_bindItemEditDone
    */
   View.prototype._bindItemEditDone = function (handler) {
     var self = this;
@@ -228,7 +234,8 @@
 
   /**
    * Bind item to edit cancel state
-   * @memberof view
+   * @method
+   * @name View#_bindItemEditCancel
    */
   View.prototype._bindItemEditCancel = function (handler) {
     var self = this;
@@ -244,7 +251,8 @@
 
   /**
    * Bind handler to event
-   * @memberof view
+   * @method
+   * @name View#bind
    *
    * @param {string} event Event you want to bind the handler to
    * @param {function} handler Function that'll be called when the event is fired

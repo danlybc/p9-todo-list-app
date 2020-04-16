@@ -80,6 +80,31 @@ npm install
 \
 Open `index.html` in your favorite browser
 
+\
+App usage :
+
+- Create a new todo by typing in the input field and then pressing Enter
+  \
+   ![Create a new todo gif demo](./docs-img/new-todo.gif)
+- Edit a todo by double-clicking it
+  \
+   ![Edit a todo gif demo](./docs-img/edit-todo.gif)
+- Remove a todo by hovering over it to make the red cross appears, then click it
+  \
+   ![Remove a todo gif demo](./docs-img/remove-todo.gif)
+- Toggle between complete state by checking the checkbox to the left
+  \
+   ![Toggle todo complete state gif demo](./docs-img/toggle-todo.gif)
+- Toggle between complete state for every todos by clicking the down arrow to the left of the input field
+  \
+   ![Toggle all todo complete state gif demo](./docs-img/toggleAll-todo.gif)
+- Remove all completed todos by clicking the button at the bottom right
+  \
+   ![Remove all completed todos gif demo](./docs-img/removeAll-todo.gif)
+- Use the navigation at the bottom to switch between views
+  \
+   ![Switch between views gif demo](./docs-img/views-todo.gif)
+
 ## Contributing
 
 \

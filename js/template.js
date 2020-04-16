@@ -1,8 +1,4 @@
 /*jshint laxbreak:true */
-/**
- * Template module to generate DOM elements
- * @namespace template
- */
 (function (window) {
   "use strict";
 
@@ -31,8 +27,8 @@
   /**
    * Sets up defaults for all the Template methods such as a default template
    *
-   * @memberof template
-   * @constructor
+   * @name Template
+   * @class
    */
   function Template() {
     this.defaultTemplate =
@@ -50,7 +46,8 @@
    *
    * NOTE: In real life you should be using a templating engine such as Mustache
    * or Handlebars, however, this is a vanilla JS example.
-   * @memberof template
+   * @method
+   * @name Template#show
    *
    * @param {object} data The object containing keys you want to find in the
    *                      template to replace.
@@ -90,7 +87,8 @@
 
   /**
    * Displays a counter of how many to dos are left to complete
-   * @memberof template
+   * @method
+   * @name Template#itemCounter
    *
    * @param {number} activeTodos The number of active todos.
    * @returns {string} String containing the count
@@ -103,7 +101,8 @@
 
   /**
    * Updates the text within the "Clear completed" button
-   * @memberof template
+   * @method
+   * @name Template#clearCompletedButton
    *
    * @param  {array} completedTodos The number of completed todos.
    * @returns {string} String containing the count

@@ -1,12 +1,13 @@
 /*global NodeList */
 /**
- * Helpers module for useful functions (selectors, handlers...)
+ *
  * @namespace helpers
  */
 (function (window) {
   "use strict";
 
   /**
+   * Helpers module for useful functions (selectors, handlers...)
    * @memberof helpers
    * @param {string} selector query selector
    * @param {string} scope scope for the query, if not provided document is the scope
